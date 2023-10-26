@@ -1,0 +1,137 @@
+.loginform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 40px 0;
+    /* border: 2px solid red; */
+}
+
+.loginform h2 {
+    font-size: 33px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.lform {
+    border: 1px solid gray;
+    box-shadow: 1px 1px 10px 1px rgb(78, 77, 77);
+    border-radius: 15px;
+    padding: 25px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lform div span {
+    display: block;
+    color: white;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.lform input {
+    width: 430px;
+    height: 45px;
+    border-radius: 5px;
+    outline: none;
+    background-color: black;
+    color: white;
+    border: 1px solid rgb(174, 171, 171);
+}
+
+.lform input::placeholder {
+    color: grey;
+    font-size: 14px;
+}
+
+.fogpass {
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    margin: 20px 0;
+    color: #6031a8;
+}
+
+.fogpass:hover {
+    color: white;
+}
+
+.lform span {
+    font-size: 14px;
+    margin: 20px 0 0px 0px;
+}
+
+.formspana {
+    color: #6031a8;
+}
+
+.formspana:hover {
+    color: white;
+}
+
+.formbtn {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+
+::placeholder {
+    color: rgb(0, 0, 0);
+    font-size: 11px;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.loginforminput {
+    padding: 0 13px;
+}
+
+.register-option {
+    /* border: 2px solid red; */
+    font-size: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.register-option span {
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+.register-option span:hover{
+    color: #6031a8;
+
+}
+
+.register-option.mag :nth-child(1)::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 400%;
+    height: 2px;
+    margin-left: -190%;
+    background-color: #6031a8;
+    
+}
+
+.register-option.tag :nth-child(2)::after {
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 200%;
+    height: 2px;
+    margin-left: -100%;
+    background-color: #6031a8;
+}
