@@ -1,145 +1,166 @@
 .main-navbar-header-img img {
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    max-width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  max-width: 100%;
 }
 
 .main-navbar {
-    border: 2px solid red;
-    display: flex;
-    padding: 20px 70px;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  padding: 20px 70px;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.5s;
+}
+
+/* FOR STICKY NAVBAR   */
+.main-navbar.sticky-nav-come {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: black;
+  box-shadow: 0px 0px 7px black;
+  background-color: white;
+  z-index: 10;
+  transition: 0.5s;
+}
+
+.main-navbaar-list1,
+.main-navbaar-list2 {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.main-navbar-list1-list,
+.main-navbar-list2-list {
+  /* border: 2px solid red; */
+  padding: 0 20px;
+
+}
+
+.main-navbar-list1-list ul,
+.main-navbar-list2-list ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.main-navbar-list1-list ul a,
+.main-navbar-list2-list ul a {
+  text-decoration: none;
+  transition: 0.3s;
+  padding: 20px;
+  cursor: pointer;
+  color: rgb(235, 235, 235);
+  font-size: 19px;
+  font-weight: 600;
+
+}
+
+.sticky-nav-come .main-navbar-list1-list ul a,
+.sticky-nav-come .main-navbar-list2-list ul a {
+  color: rgb(56, 56, 56);
+}
+
+.main-navbar-list1-list ul a:hover,
+.main-navbar-list2-list ul a:hover {
+  transition: 0.3s;
+  color: #6031a8;
+}
+
+.main-navbar-list1-logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-navbar-list1-logo-icon i {
+  font-size: 35px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+
+
+}
+.sticky-nav-come .main-navbar-list1-logo-icon i {
+  color: black;
+}
+
+.main-navbar-list1-logo-icon img {
+  width: 220px;
+  padding: 0 30px;
+}
+
+.main-navbar-list2-button button {
+  padding: 9px 12px;
+  border: none;
+  outline: none;
+  position: relative;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+  border-radius: 7px;
+  background-color: #6031a8;
+}
+
+.main-navbar-list2-button button::after {
+  position: absolute;
+  content: '';
+  width: 1.1px;
+  height: 35px;
+  top: 0;
+  cursor: initial;
+  background-color: #6f6e6e;
+  left: -20px;
+}
+
+@media screen and (max-width:1150px) {
+  .main-navbar-list1-list ul {
+
+    /* display: none; */
+    flex-direction: column;
+    align-items: start;
+    left: -100%;
+    top: 0px;
+    width: 300px;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    height: 100%;
+    transition: 0.5s;
+
   }
-  
-  .main-navbaar-list1,
-  .main-navbaar-list2 {
-    /* border: 2px solid red; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  
-  }
-  
-  .main-navbar-list1-list,
+
+}
+
+@media screen and (max-width:772px) {
   .main-navbar-list2-list {
-    /* border: 2px solid red; */
-    padding: 0 20px;
-  
+    display: none;
   }
-  
-  .main-navbar-list1-list ul,
-  .main-navbar-list2-list ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-  }
-  
-  .main-navbar-list1-list ul a,
-  .main-navbar-list2-list ul a {
-    text-decoration: none;
-    transition: 0.3s;
-    padding: 20px;
-    cursor: pointer;
-    color: white;
-    font-size: 19px;
-    font-weight: 400;
-  }
-  .main-navbar-list1-list ul a:hover,
-  .main-navbar-list2-list ul a:hover
-  {
-    transition: 0.3s;
-    color: #6031a8;
-  }
-  
-  .main-navbar-list1-logo-icon {
-    /* border: 2px solid red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .main-navbar-list1-logo-icon i {
-    font-size: 28px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
 
-  
-  }
-  
-  .main-navbar-list1-logo-icon img {
-    width: 220px;
-    padding: 0 30px;
-  }
-  
-  .main-navbar-list2-button button {
-    padding: 9px 12px;
-    border: none;
-    outline: none;
-    position: relative;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: 0.3s;
-    border-radius: 7px;
-    background-color: #6031a8;
-  }
-  
   .main-navbar-list2-button button::after {
-    position: absolute;
-    content: '';
-    width: 1.1px;
-    height: 35px;
-    top: 0;
-    cursor: initial;
-    background-color: #6f6e6e;
-    left: -20px;
+    display: none;
   }
-  
-  @media screen and (max-width:1150px) {
-    .main-navbar-list1-list ul {
-        
-      /* display: none; */
-      flex-direction: column;
-      align-items: start;
-      left: -100%;
-      top: 0px;
-      width: 300px;
-      z-index: 10;
-      margin: 0;
-      padding: 0;
-      position: fixed;
-      height: 100%;
-      transition: 0.5s;
 
-    }
-  
+  .main-navbar-list1-logo-icon img {
+    width: 180px;
   }
-  
-  @media screen and (max-width:772px) {
-    .main-navbar-list2-list {
-      display: none;
-    }
-  
-    .main-navbar-list2-button button::after {
-      display: none;
-    }
-  
-    .main-navbar-list1-logo-icon img {
-      width: 180px;
-    }
-  
-    .main-navbar {
-      padding: 20px 50px;
-    }
-  
-    .main-navbar-list2-button button {
-      padding: 9px 10px;
-      font-size: 13px;
-    }
-  
-  
+
+  .main-navbar {
+    padding: 20px 50px;
   }
+
+  .main-navbar-list2-button button {
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+
+
+}

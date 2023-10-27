@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Login.css";
+import { Link } from "react-router-dom";
+
 const Register = () => {
   const [userReg, setUserReg] = useState(true);
   const handleRegisterUser = () => {
@@ -72,9 +74,9 @@ const Register = () => {
               />
               <span>
                 Already have an account?{" "}
-                <a href="/account/register" className="formspana">
-                  Sign in
-                </a>
+                <Link to="/account/Login" className="formspana">
+                  Login here
+                </Link>
               </span>
             </form>
           </div>

@@ -4,7 +4,8 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 40px 0;
+    padding: 120px 0;
+
     /* border: 2px solid red; */
 }
 
@@ -107,7 +108,8 @@
     position: relative;
     cursor: pointer;
 }
-.register-option span:hover{
+
+.register-option span:hover {
     color: #6031a8;
 
 }
@@ -115,13 +117,13 @@
 .register-option.mag :nth-child(1)::after {
     content: "";
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
     left: 50%;
     width: 400%;
     height: 2px;
     margin-left: -190%;
     background-color: #6031a8;
-    
+
 }
 
 .register-option.tag :nth-child(2)::after {

@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/Login.css";
+import { Link } from "react-router-dom";
+
 const Login = () => {
   return (
     <div>
@@ -37,9 +39,9 @@ const Login = () => {
           />
           <span>
             Don't have an account?{" "}
-            <a href="/account/register" className="formspana">
-              Create account
-            </a>
+            <Link to="/account/register" className="formspana">
+              Create an account
+            </Link>
           </span>
         </form>
       </div>
