@@ -12,7 +12,7 @@
 
 .category-list {
     display: flex;
-    padding:70px 0 150px 0;
+    padding: 70px 0 150px 0;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -24,7 +24,7 @@
     justify-content: center;
     flex-direction: column;
     width: 310px;
-    overflow:hidden;
+    overflow: hidden;
     height: 285px;
     border-radius: 15px;
     background-color: black;

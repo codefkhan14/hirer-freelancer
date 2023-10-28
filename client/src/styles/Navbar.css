@@ -28,7 +28,6 @@
 
 .main-navbaar-list1,
 .main-navbaar-list2 {
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,7 +36,6 @@
 
 .main-navbar-list1-list,
 .main-navbar-list2-list {
-  /* border: 2px solid red; */
   padding: 0 20px;
 
 }
@@ -66,11 +64,7 @@
   color: rgb(56, 56, 56);
 }
 
-.main-navbar-list1-list ul a:hover,
-.main-navbar-list2-list ul a:hover {
-  transition: 0.3s;
-  color: #6031a8;
-}
+
 
 .main-navbar-list1-logo-icon {
   display: flex;
@@ -78,14 +72,21 @@
   justify-content: center;
 }
 
+/* ACTIVE CLASS  */
+.main-navbar-list1-list ul .active,
+.main-navbar-list2-list ul .active {
+  color: #6031a8;
+}
+
 .main-navbar-list1-logo-icon i {
-  font-size: 35px;
   color: white;
   font-weight: bold;
   cursor: pointer;
+  font-size: 35px;
 
 
 }
+
 .sticky-nav-come .main-navbar-list1-logo-icon i {
   color: black;
 }

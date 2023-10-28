@@ -16,7 +16,9 @@ const Register = () => {
         <div>
           <div className="loginform">
             <form className="lform">
-              <div className={userReg ? "register-option mag" : "register-option"}>
+              <div
+                className={userReg ? "register-option mag" : "register-option"}
+              >
                 <span style={{ fontSize: "17px" }} onClick={handleRegisterUser}>
                   User
                 </span>
@@ -86,7 +88,11 @@ const Register = () => {
           <div>
             <div className="loginform">
               <form className="lform">
-                <div className={userReg ? "register-option" : "register-option tag"}>
+                <div
+                  className={
+                    userReg ? "register-option" : "register-option tag"
+                  }
+                >
                   <span
                     style={{ fontSize: "17px" }}
                     onClick={handleRegisterUser}

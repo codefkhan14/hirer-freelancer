@@ -1,0 +1,94 @@
+.form-top-section {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.form-top-section h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1.4px;
+}
+
+.contact-section {
+    padding: 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+/* FORM SECTION  */
+.contact-section-form {
+    max-width: 500px;
+    margin-left: 30px;
+    height: 100%;
+
+}
+
+
+.contact-section-form div input {
+    width: 430px;
+    height: 45px;
+    margin: 10px 0;
+    border-radius: 20px;
+}
+
+.contact-section-form div input[type="text"],
+.contact-section-form div input[type="email"],
+.contact-section-form div textarea {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid grey;
+    width: 100%;
+    margin: 10px 0;
+    background-color: rgb(102, 102, 102);
+    font-size: 16px;
+    color: white;
+}
+
+.contact-section-form div input[type="text"]::placeholder,
+.contact-section-form div input[type="email"]::placeholder,
+.contact-section-form div textarea::placeholder {
+    font-size: 15px;
+    color: rgb(213, 213, 213);
+    letter-spacing: 0.3px;
+}
+
+.contact-section-form div input[type="submit"] {
+    background-color: #6031a8;
+    color: white;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+
+}
+
+/* DETAILS SECTION  */
+.contact-section-detail {
+    margin-right: 30px;
+
+}
+
+.contact-section-detail div {
+    margin: 20px 0;
+
+}
+
+.contact-section-detail div P {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+
+    font-size: 17px;
+}
+
+.contact-section-detail div P i {
+    font-size: 26px;
+    margin-inline-end: 15px;
+    color: #6031a8;
+}

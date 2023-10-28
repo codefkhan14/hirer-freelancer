@@ -31,7 +31,7 @@ const Login = () => {
           </a>
 
           <input
-          style={{backgroundColor:" #6031a8"}}
+            style={{ backgroundColor: " #6031a8" }}
             type="submit"
             name="button"
             className="formbtn"

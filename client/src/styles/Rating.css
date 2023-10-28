@@ -1,0 +1,34 @@
+.rating-section {
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    justify-content: space-around;
+
+
+}
+
+.rating-section1 {
+    text-align: center;
+
+}
+
+.rating-section1 img {
+    width: 100px;
+    border-radius: 70px;
+    margin: 14px 0;
+}
+
+.rating-section1 h1 {
+    font-size: 45px;
+    letter-spacing: 0.3px;
+    margin: 10px 0;
+    font-weight: bold;
+    /* color: rgb(189, 189, 189); */
+    /* color: #333333; */
+    color: #6031a8;
+}
+
+.rating-section1 p {
+    color: grey;
+    font-size: 18px;
+}
