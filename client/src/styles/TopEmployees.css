@@ -1,0 +1,155 @@
+.top-main-employees {
+    margin: 150px 0;
+}
+
+.top-main-employees h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1.4px;
+
+
+}
+
+/* CATEGORIES  */
+
+.top-category-employee {
+    display: flex;
+    margin: 15px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.top-category-employee div {
+    margin: 20px 10px;
+    font-size: 15px;
+}
+
+.top-category-employee-heading {
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+.top-category-employee-list {
+    border: 2px solid #424242;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 20px;
+
+}
+
+
+
+
+/* NEXT DETAILS  */
+.top-employees {
+    font-family: sans-serif;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top-employee-section {
+    position: relative;
+    max-width: 1273px;
+    scrollbar-width: thin;
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    transition: scroll 0.3s ease-in-out;
+
+    &::-webkit-scrollbar {
+        width: 30px;
+        height: 8px;
+        padding: 20px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 15px;
+        background: #6031a8;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #666;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+}
+
+.top-employee-details {
+    border: 2px solid rgb(116, 116, 116);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    width: 450px;
+    margin: 12px;
+    height: 290px;
+    padding: 10px;
+
+
+}
+
+.top-employee-user-detail {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 130px;
+    line-height: 2;
+    margin: 10px;
+}
+
+
+
+.top-employee-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 70%;
+    margin: 10px;
+}
+
+
+
+
+.top-employee-detail-btn {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+
+}
+
+.top-employee-detail-btn button {
+    margin: 20px;
+    cursor: pointer;
+    background-color: rgba(43, 42, 42, 0.6);
+    color: white;
+    border: none;
+    font-size: 24px;
+    user-select: none;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.top-employee-detail-btn button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+
+.top-employee-detail-btn button:disabled {
+    background-color: rgb(11, 11, 11);
+    color: white;
+    cursor: not-allowed;
+}

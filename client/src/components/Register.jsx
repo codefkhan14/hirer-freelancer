@@ -14,8 +14,9 @@ const Register = () => {
     <>
       {userReg ? (
         <div>
-          <div className="loginform">
-            <form className="lform">
+          <div className="loginform-main-section">
+            <form className="login-form">
+              {/* option for employee or user  */}
               <div
                 className={userReg ? "register-option mag" : "register-option"}
               >
@@ -26,68 +27,70 @@ const Register = () => {
                   Employer
                 </span>
               </div>
+
+              {/* name input  */}
               <div>
                 <span>Full Name</span>
-                <input
-                  type="email"
-                  placeholder="John Doe"
-                  className="loginforminput"
-                  name="email"
-                />
+                <input type="text" placeholder="John Doe" name="name" />
               </div>
+              {/* email input  */}
               <div>
                 <span>Email</span>
                 <input
                   type="email"
                   placeholder="john@example.com"
-                  className="loginforminput"
                   name="email"
                 />
               </div>
+              {/* phone input  */}
               <div>
                 <span>Phone</span>
-                <input
-                  type="email"
-                  placeholder="92xxxxxx78"
-                  className="loginforminput"
-                  name="email"
-                />
+                <input type="email" placeholder="92xxxxxx78" name="text" />
               </div>
+              {/* password input  */}
               <div>
                 <span>Password</span>
                 <input
                   type="password"
                   placeholder="Must be atleast 6 characters"
-                  className="loginforminput"
                   name="password"
                 />
               </div>
 
-              <a href="" className="fogpass">
-                Forgot Password?
-              </a>
+              {/* forgotte password  */}
+              <div className="login-from-forgpass">
+                <a href="">Forgot Password?</a>
+              </div>
 
-              <input
-                style={{ backgroundColor: " #6031a8" }}
-                type="submit"
-                name="button"
-                className="formbtn"
-                value="Register"
-              />
-              <span>
-                Already have an account?{" "}
-                <Link to="/account/Login" className="formspana">
-                  Login here
-                </Link>
-              </span>
+              {/* login button input  */}
+              <div>
+                <input
+                  style={{ backgroundColor: " #6031a8" }}
+                  type="submit"
+                  name="button"
+                  className="login-from-btn"
+                  value="Register"
+                />
+              </div>
+
+              {/* Option create new act  */}
+              <div className="login-form-other-option">
+                <span>
+                  Already have an account?{" "}
+                  <Link to="/account/login" className="login-form-create-act">
+                    Login here
+                  </Link>
+                </span>
+              </div>
             </form>
           </div>
         </div>
       ) : (
         <>
           <div>
-            <div className="loginform">
-              <form className="lform">
+            <div className="loginform-main-section">
+              <form className="login-form">
+                {/* option for employee or user  */}
                 <div
                   className={
                     userReg ? "register-option" : "register-option tag"
@@ -106,52 +109,61 @@ const Register = () => {
                     Employer
                   </span>
                 </div>
+
+                {/* name input  */}
                 <div>
                   <span>Full Name</span>
-                  <input
-                    type="email"
-                    placeholder="John Doe"
-                    className="loginforminput"
-                    name="email"
-                  />
+                  <input type="text" placeholder="John Doe" name="name" />
                 </div>
+                {/* email input  */}
                 <div>
                   <span>Email</span>
                   <input
                     type="email"
                     placeholder="john@example.com"
-                    className="loginforminput"
                     name="email"
                   />
                 </div>
-
+                {/* phone input  */}
+                <div>
+                  <span>Phone</span>
+                  <input type="email" placeholder="92xxxxxx78" name="text" />
+                </div>
+                {/* password input  */}
                 <div>
                   <span>Password</span>
                   <input
                     type="password"
                     placeholder="Must be atleast 6 characters"
-                    className="loginforminput"
                     name="password"
                   />
                 </div>
 
-                <a href="" className="fogpass">
-                  Forgot Password?
-                </a>
+                {/* forgotte password  */}
+                <div className="login-from-forgpass">
+                  <a href="">Forgot Password?</a>
+                </div>
 
-                <input
-                  style={{ backgroundColor: " #6031a8" }}
-                  type="submit"
-                  name="button"
-                  className="formbtn"
-                  value="Register"
-                />
-                <span>
-                  Already have an account?{" "}
-                  <a href="/account/register" className="formspana">
-                    Sign in
-                  </a>
-                </span>
+                {/* login button input  */}
+                <div>
+                  <input
+                    style={{ backgroundColor: " #6031a8" }}
+                    type="submit"
+                    name="button"
+                    className="login-from-btn"
+                    value="Register"
+                  />
+                </div>
+
+                {/* Option create new act  */}
+                <div className="login-form-other-option">
+                  <span>
+                    Already have an account?{" "}
+                    <Link to="/account/login" className="login-form-create-act">
+                      Login here
+                    </Link>
+                  </span>
+                </div>
               </form>
             </div>
           </div>

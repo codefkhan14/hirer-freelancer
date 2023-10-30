@@ -1,4 +1,4 @@
-.loginform {
+.loginform-main-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,27 +6,20 @@
     height: 100%;
     padding: 120px 0;
 
-    /* border: 2px solid red; */
 }
 
-.loginform h2 {
-    font-size: 33px;
-    text-align: center;
-    margin-bottom: 45px;
-}
-
-.lform {
+.login-form {
     border: 1px solid gray;
     box-shadow: 1px 1px 10px 1px rgb(78, 77, 77);
     border-radius: 15px;
     padding: 25px 25px;
     display: flex;
+    max-width: 100%;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
-.lform div span {
+.login-form div span {
     display: block;
     color: white;
     font-size: 14px;
@@ -34,9 +27,11 @@
     margin-bottom: 15px;
 }
 
-.lform input {
+.login-form div input {
     width: 430px;
     height: 45px;
+    padding: 0 13px;
+
     border-radius: 5px;
     outline: none;
     background-color: black;
@@ -44,38 +39,44 @@
     border: 1px solid rgb(174, 171, 171);
 }
 
-.lform input::placeholder {
+.login-form div input::placeholder {
     color: grey;
     font-size: 14px;
 }
 
-.fogpass {
-    font-size: 14px;
+.login-from-forgpass {
     display: flex;
     justify-content: flex-end;
     align-items: end;
     margin: 20px 0;
-    color: #6031a8;
+    text-align: end;
 }
 
-.fogpass:hover {
+.login-from-forgpass a {
+    text-align: end;
+    font-size: 15px;
+    color: #6031a8;
+
+}
+
+.login-from-forgpass a:hover {
     color: white;
 }
 
-.lform span {
+.login-form-other-option {
     font-size: 14px;
-    margin: 20px 0 0px 0px;
+    text-align: center;
 }
 
-.formspana {
+.login-form-create-act {
     color: #6031a8;
 }
 
-.formspana:hover {
+.login-form-create-act:hover {
     color: white;
 }
 
-.formbtn {
+.login-from-btn {
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
@@ -83,18 +84,9 @@
 }
 
 
-::placeholder {
-    color: rgb(0, 0, 0);
-    font-size: 11px;
-    font-family: "Noto Sans", sans-serif;
-}
 
-.loginforminput {
-    padding: 0 13px;
-}
-
+/* REGISTER ACCOUNT  */
 .register-option {
-    /* border: 2px solid red; */
     font-size: 50px;
     width: 100%;
     display: flex;
@@ -107,11 +99,6 @@
     font-weight: bold;
     position: relative;
     cursor: pointer;
-}
-
-.register-option span:hover {
-    color: #6031a8;
-
 }
 
 .register-option.mag :nth-child(1)::after {
