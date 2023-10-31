@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Contact from "./pages/Contact";
+import EmployeeList from "./pages/EmployeeList";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/account/login" element={<Login />} />
           <Route path="/account/register" element={<Register />} />
+          <Route path="/clients/maching-prefrence" element={<EmployeeList />} />
         </Routes>
       </BrowserRouter>
     </>

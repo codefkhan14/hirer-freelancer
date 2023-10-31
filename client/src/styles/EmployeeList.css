@@ -1,0 +1,186 @@
+
+
+.employee-list {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+}
+
+
+/* SEARCH SECITON  */
+.employee-list-filter-section {
+    max-width: 400px;
+    border: 2px solid blue;
+
+
+}
+
+.employee-list-search {
+    border: 2px solid green;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0;
+
+}
+
+.employee-list-search div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.employee-list-search div p {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.employee-list-search div input {
+    width: 250px;
+    padding: 10.2px 15px;
+}
+
+.employee-list-search div i {
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    padding: 7px 10px;
+    background-color: #6031a8;
+    color: white;
+    font-weight: bold;
+
+}
+
+/* FILTER SECTION  */
+.employee-list-filter {
+    border: 2px solid green;
+    /* padding: 5 0px 0; */
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.employee-list-filter div p {
+    font-weight: bold;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.employee-list-filter div p i {
+    margin-right: 6px;
+    color: wheat;
+}
+
+.employee-list-filter div span {
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+
+}
+
+.employee-list-filter div input {
+    width: 290px;
+    margin: 10px 0;
+    padding: 10.2px 15px;
+}
+
+/* employee-list-list  */
+.top-main-employees {
+    margin: 150px 0;
+}
+
+.top-main-employees h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1.4px;
+
+
+}
+
+/* CATEGORIES  */
+
+.top-category-employee {
+    display: flex;
+    margin: 15px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.top-category-employee div {
+    margin: 20px 10px;
+    font-size: 15px;
+}
+
+.top-category-employee-heading {
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+.top-category-employee-list {
+    border: 2px solid #424242;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 20px;
+
+}
+
+
+
+
+/* NEXT DETAILS  */
+
+.top-employee-sectionn {
+    position: relative;
+    border: 2px solid red;
+    max-width: 873px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: scroll 0.3s ease-in-out;
+
+}
+
+.top-employee-detailss {
+    border: 2px solid rgb(116, 116, 116);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    width: 550px;
+    margin: 12px;
+    height: 350px;
+    padding: 10px;
+
+
+}
+
+.top-employee-user-detaill {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    line-height: 2;
+    margin: 10px;
+}
+
+
+
+.top-employee-imgg img {
+    width: 100px;
+    height: 100px;
+    border-radius: 70%;
+    margin: 10px;
+}

@@ -4,18 +4,14 @@ import { Link, useLocation } from "react-router-dom";
 import { HiMenuAlt1 } from "react-icons/hi";
 
 const Navbar = () => {
- const location = useLocation();
- const [pathname, setPathname] = useState('')
- useEffect(()=>{
- if(location.pathname === "/contact")
- setPathname("contact")
- if(location.pathname === "/account/login")
- setPathname("login")
- if(location.pathname === "/account/register")
- setPathname("register")
-   
- }, [pathname])
- console.log(location);
+  const location = useLocation();
+  const [pathname, setPathname] = useState("");
+  useEffect(() => {
+    if (location.pathname === "/contact") setPathname("contact");
+    if (location.pathname === "/account/login") setPathname("login");
+    if (location.pathname === "/account/register") setPathname("register");
+  }, [pathname]);
+  console.log(location);
 
   const [stickyClass, setStickyClass] = useState("");
 
@@ -72,7 +68,12 @@ const Navbar = () => {
                 <Link to="/">Services</Link>
               </li>
               <li>
-                <Link to="/contact" className={pathname === "contact" ? "active" : ""}>Contact</Link>
+                <Link
+                  to="/contact"
+                  className={pathname === "contact" ? "active" : ""}
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
@@ -81,19 +82,35 @@ const Navbar = () => {
           <div className="main-navbar-list2-list">
             <ul>
               <li>
-                <Link to="/account/login" className={pathname==="login" ? "hide-navbar-list2 active" : "hide-navbar-list2"}>
+                <Link
+                  to="/account/login"
+                  className={
+                    pathname === "login"
+                      ? "hide-navbar-list2 active"
+                      : "hide-navbar-list2"
+                  }
+                >
                   Login
                 </Link>
               </li>
               <li>
-                <Link to="/account/register" className={pathname ==="register" ? "hide-navbar-list2 active" : "hide-navbar-list2"}>
+                <Link
+                  to="/account/register"
+                  className={
+                    pathname === "register"
+                      ? "hide-navbar-list2 active"
+                      : "hide-navbar-list2"
+                  }
+                >
                   Register
                 </Link>
               </li>
             </ul>
           </div>
           <div className="main-navbar-list2-button">
-            <button>Hire Talent +</button>
+            <button>
+              <Link to="/clients/maching-prefrence">Hire Talent +</Link>
+            </button>
           </div>
         </div>
       </div>
