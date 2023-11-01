@@ -13,9 +13,9 @@ const Home = () => {
       <Navbar />
       <Header />
       <Categories />
-      <TopEmployees/>
-      <HirePoster/>
-      <Rating/>
+      <TopEmployees />
+      <HirePoster />
+      <Rating />
       <Footer />
     </div>
   );

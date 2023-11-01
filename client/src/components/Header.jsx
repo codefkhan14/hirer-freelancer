@@ -1,12 +1,9 @@
 import React from "react";
-
+import headerPic from "../assests/headercamera.png";
 const Header = () => {
   return (
     <div className="main-navbar-header-img">
-      <img
-        src="https://hireyourlensman.com/wp-content/uploads/2023/10/Untitled-design-3.png"
-        alt=""
-      />
+      <img src={headerPic} alt="" />
     </div>
   );
 };

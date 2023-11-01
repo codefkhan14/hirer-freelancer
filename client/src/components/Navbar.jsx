@@ -108,9 +108,9 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="main-navbar-list2-button">
-            <button>
-              <Link to="/clients/maching-prefrence">Hire Talent +</Link>
-            </button>
+            <Link to="/clients/maching-prefrence">
+              <button>Hire Talent +</button>
+            </Link>
           </div>
         </div>
       </div>

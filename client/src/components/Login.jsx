@@ -36,7 +36,7 @@ const Login = () => {
               value="Login"
             />
           </div>
-          
+
           {/* Option create new act  */}
           <div className="login-form-other-option">
             <span>

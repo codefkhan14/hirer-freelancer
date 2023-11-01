@@ -7,9 +7,6 @@ const Contact = () => {
     <div className="form-top-section">
       <h1>Contact Us!</h1>
       <div className="contact-section">
-
-     
-
         <div className="contact-section-detail">
           <div>
             <p>
@@ -46,12 +43,11 @@ const Contact = () => {
             <input type="email" placeholder="Email" required />
           </div>
           <div>
-       <textarea rows="8" placeholder="Message" required></textarea>
-     </div>
+            <textarea rows="8" placeholder="Message" required></textarea>
+          </div>
           <div>
             <input type="submit" value="Submit" required />
           </div>
-         
         </div>
       </div>
     </div>

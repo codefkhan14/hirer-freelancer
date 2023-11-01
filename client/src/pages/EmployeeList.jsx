@@ -1,16 +1,16 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import EmployeeListt from '../components/EmployeeList'
+import React from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import EmployeeListt from "../components/EmployeeList";
 
 const EmployeeList = () => {
   return (
     <div>
-      <Navbar/>
-      <EmployeeListt/>
-      <Footer/>
+      <Navbar />
+      <EmployeeListt />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default EmployeeList
+export default EmployeeList;

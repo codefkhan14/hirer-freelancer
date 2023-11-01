@@ -1,37 +1,42 @@
-.hire-poster-main{
+.hire-poster-main {
     /* border: 2px solid red; */
-    padding:100px 150px;
+    padding: 100px 150px;
 
 }
-.hire-poster{
+
+.hire-poster {
     padding: 35px;
     border-radius: 20px;
     display: flex;
-    background-color:  #42276a;
+    background-color: #42276a;
     justify-content: space-around;
 
 }
-.hire-poster-img img{
+
+.hire-poster-img img {
     width: 350px;
 }
 
-.hire-poster-detail{
+.hire-poster-detail {
     max-width: 600px;
     margin-top: 30px;
     /* border: 2px solid red; */
 }
-.hire-poster-detail h2{
+
+.hire-poster-detail h2 {
     font-size: 37px;
 
     font-weight: bold;
 
 }
-.hire-poster-detail p{
+
+.hire-poster-detail p {
     font-size: 15px;
     margin: 12px 0;
     color: rgb(179, 179, 179);
 }
-.hire-poster-detail div button{
+
+.hire-poster-detail div button {
     padding: 9px 12px;
     border: none;
     outline: none;

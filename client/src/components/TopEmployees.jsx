@@ -140,83 +140,62 @@ const TopEmployees = () => {
 
   return (
     <div className="top-main-employees">
-   <h2>Latest Employees on Hirer</h2>
-   <div className="top-category-employee">
-    <div className="top-category-employee-heading">
-      Popular categories:
-    </div>
-    <div className="top-category-employee-list">
-      Photograpgy
-    </div >
-    <div className="top-category-employee-list">
-      Videography
-    </div>
-    <div className="top-category-employee-list">
-      Modeling
-    </div>
-    <div className="top-category-employee-list">
-      Videography
-    </div>
-    <div className="top-category-employee-list">
-     Shooter
-    </div>
-    <div className="top-category-employee-list">
-      Videography
-    </div>
-    <div className="top-category-employee-list">
-      Modeling
-    </div>
-    <div className="top-category-employee-list">
-     Shooter
-    </div>
-   </div>
-    <div className="top-employees">
-
-
-      <div className="top-employee-section" ref={sliderRef}>
-        {userDetails.map((item) => {
-          return (
-            <div className="top-employee-details" key={item.id}>
-              <div className="top-employee-user-detail">
-                <div>
-                  <h4>{item.name}</h4>
-                  <p>{item.location}</p>
-                  <p>{item.Price}</p>
+      <h2>Latest Employees on Hirer</h2>
+      <div className="top-category-employee">
+        <div className="top-category-employee-heading">Popular categories:</div>
+        <div className="top-category-employee-list">Photograpgy</div>
+        <div className="top-category-employee-list">Videography</div>
+        <div className="top-category-employee-list">Modeling</div>
+        <div className="top-category-employee-list">Videography</div>
+        <div className="top-category-employee-list">Shooter</div>
+        <div className="top-category-employee-list">Videography</div>
+        <div className="top-category-employee-list">Modeling</div>
+        <div className="top-category-employee-list">Shooter</div>
+      </div>
+      <div className="top-employees">
+        <div className="top-employee-section" ref={sliderRef}>
+          {userDetails.map((item) => {
+            return (
+              <div className="top-employee-details" key={item.id}>
+                <div className="top-employee-user-detail">
+                  <div>
+                    <h4>{item.name}</h4>
+                    <p>{item.location}</p>
+                    <p>{item.Price}</p>
+                  </div>
+                  <div>
+                    <a href="">
+                      View Details <SlArrowRight />
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <a href="">
-                    View Details <SlArrowRight />
-                  </a>
+                <div className="top-employee-img">
+                  <img alt="Loading..." src={item?.images} />
                 </div>
               </div>
-              <div className="top-employee-img">
-                <img alt="Loading..." src={item?.images} />
-              </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
 
-      <div className="top-employee-detail-btn">
-        <button
-          onClick={() => {
-            handleScroll("left");
-          }}
-          disabled={!scrollable.left}
-        >
-          <TfiAngleLeft />
-        </button>
-        <button
-          onClick={() => {
-            handleScroll("right");
-          }}
-          disabled={!scrollable.right}
-        >
-          <SlArrowRight />
-        </button>
+        <div className="top-employee-detail-btn">
+          <button
+            onClick={() => {
+              handleScroll("left");
+            }}
+            disabled={!scrollable.left}
+          >
+            <TfiAngleLeft />
+          </button>
+          <button
+            onClick={() => {
+              handleScroll("right");
+            }}
+            disabled={!scrollable.right}
+          >
+            <SlArrowRight />
+          </button>
+        </div>
       </div>
-    </div>
-
     </div>
   );
 };

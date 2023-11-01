@@ -1,28 +1,27 @@
-
-
 .employee-list {
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    margin: 60px 0;
     display: flex;
-    flex-direction: row;
-
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 
 /* SEARCH SECITON  */
 .employee-list-filter-section {
-    max-width: 400px;
-    border: 2px solid blue;
+    border: 1px solid grey;
+    height: 100%;
+    padding: 0 20px;
+    border-radius: 10px;
 
 
 }
 
 .employee-list-search {
-    border: 2px solid green;
+    border-bottom: 1px solid grey;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 30px 0;
+    padding: 40px 0;
 
 }
 
@@ -57,9 +56,8 @@
 
 /* FILTER SECTION  */
 .employee-list-filter {
-    border: 2px solid green;
-    /* padding: 5 0px 0; */
-    margin-top: 25px;
+    /* border: 1px solid grey; */
+    /* margin-top: 25px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,6 +68,7 @@
 .employee-list-filter div p {
     font-weight: bold;
     font-size: 17px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,49 +92,21 @@
     padding: 10.2px 15px;
 }
 
-/* employee-list-list  */
-.top-main-employees {
-    margin: 150px 0;
-}
-
-.top-main-employees h2 {
-    text-align: center;
-    font-size: 35px;
-    font-weight: bold;
-    color: white;
-    letter-spacing: 1.4px;
-
-
-}
-
-/* CATEGORIES  */
-
-.top-category-employee {
-    display: flex;
-    margin: 15px 0;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.top-category-employee div {
-    margin: 20px 10px;
-    font-size: 15px;
-}
-
-.top-category-employee-heading {
-    text-transform: uppercase;
-    font-weight: bold;
-
-}
-
-.top-category-employee-list {
-    border: 2px solid #424242;
-    padding: 6px 12px;
+.employee-list-filter div input[type="submit"] {
+    background-color: #6031a8;
+    border: none;
+    outline: none;
     cursor: pointer;
-    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 14px;
 
 }
+
+
+
+
 
 
 
@@ -143,25 +114,26 @@
 /* NEXT DETAILS  */
 
 .top-employee-sectionn {
-    position: relative;
-    border: 2px solid red;
-    max-width: 873px;
+    /* border: 1px solid grey; */
+    /* border:2px solid blue; */
+    max-width: 70%;
     display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     transition: scroll 0.3s ease-in-out;
 
 }
 
 .top-employee-detailss {
-    border: 2px solid rgb(116, 116, 116);
+    border: 1px solid rgb(116, 116, 116);
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    width: 550px;
-    margin: 12px;
-    height: 350px;
+    width: 300px;
+    /* margin:0 15px 15px; */
+    margin: 0 10px 20px 10px;
+    height: 280px;
     padding: 10px;
 
 

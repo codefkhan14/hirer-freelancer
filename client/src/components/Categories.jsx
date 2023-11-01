@@ -1,9 +1,7 @@
 import React from "react";
 import "../styles/Categories.css";
-import categoryp from "../assests/download.png";
 import { BiCookie } from "react-icons/bi";
 
-import category from "../assests/category.png";
 const Categories = () => {
   return (
     <div className="category-lists">
@@ -23,7 +21,7 @@ const Categories = () => {
             </p>
           </div>
           <div>
-            <p style={{ letterSpacing: "0.4px", lineHeight:"20px"}}>
+            <p style={{ letterSpacing: "0.4px", lineHeight: "20px" }}>
               Here are lists of best photgraphrs <br /> with higher rating
             </p>
           </div>
@@ -40,7 +38,7 @@ const Categories = () => {
             </p>
           </div>
           <div>
-            <p style={{ letterSpacing: "0.4px", lineHeight:"20px"}}>
+            <p style={{ letterSpacing: "0.4px", lineHeight: "20px" }}>
               Here are lists of best photgraphrs <br /> with higher rating
             </p>
           </div>
@@ -57,7 +55,7 @@ const Categories = () => {
             </p>
           </div>
           <div>
-            <p style={{ letterSpacing: "0.4px", lineHeight:"20px"}}>
+            <p style={{ letterSpacing: "0.4px", lineHeight: "20px" }}>
               Here are lists of best photgraphrs <br /> with higher rating
             </p>
           </div>
@@ -74,7 +72,7 @@ const Categories = () => {
             </p>
           </div>
           <div>
-            <p style={{ letterSpacing: "0.4px", lineHeight:"20px"}}>
+            <p style={{ letterSpacing: "0.4px", lineHeight: "20px" }}>
               Here are lists of best photgraphrs <br /> with higher rating
             </p>
           </div>
@@ -91,7 +89,7 @@ const Categories = () => {
             </p>
           </div>
           <div>
-            <p style={{ letterSpacing: "0.4px", lineHeight:"20px"}}>
+            <p style={{ letterSpacing: "0.4px", lineHeight: "20px" }}>
               Here are lists of best photgraphrs <br /> with higher rating
             </p>
           </div>
@@ -108,7 +106,7 @@ const Categories = () => {
             </p>
           </div>
           <div>
-            <p style={{ letterSpacing: "0.4px", lineHeight:"20px"}}>
+            <p style={{ letterSpacing: "0.4px", lineHeight: "20px" }}>
               Here are lists of best photgraphrs <br /> with higher rating
             </p>
           </div>
@@ -125,7 +123,7 @@ const Categories = () => {
             </p>
           </div>
           <div>
-            <p style={{ letterSpacing: "0.4px", lineHeight:"20px"}}>
+            <p style={{ letterSpacing: "0.4px", lineHeight: "20px" }}>
               Here are lists of best photgraphrs <br /> with higher rating
             </p>
           </div>
@@ -142,7 +140,7 @@ const Categories = () => {
             </p>
           </div>
           <div>
-            <p style={{ letterSpacing: "0.4px", lineHeight:"20px"}}>
+            <p style={{ letterSpacing: "0.4px", lineHeight: "20px" }}>
               Here are lists of best photgraphrs <br /> with higher rating
             </p>
           </div>
@@ -159,12 +157,12 @@ const Categories = () => {
             </p>
           </div>
           <div>
-            <p style={{ letterSpacing: "0.4px", lineHeight:"20px"}}>
+            <p style={{ letterSpacing: "0.4px", lineHeight: "20px" }}>
               Here are lists of best photgraphrs <br /> with higher rating
             </p>
           </div>
         </div>
-       
+
         <div className="category-item">
           <div className="category-item-photo">
             <i>
