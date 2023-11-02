@@ -1,5 +1,4 @@
 .employee-list {
-    /* border: 2px solid red; */
     margin: 60px 0;
     display: flex;
     justify-content: space-evenly;
@@ -56,8 +55,6 @@
 
 /* FILTER SECTION  */
 .employee-list-filter {
-    /* border: 1px solid grey; */
-    /* margin-top: 25px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,8 +111,6 @@
 /* NEXT DETAILS  */
 
 .top-employee-sectionn {
-    /* border: 1px solid grey; */
-    /* border:2px solid blue; */
     max-width: 70%;
     display: flex;
     justify-content: center;
@@ -126,29 +121,68 @@
 }
 
 .top-employee-detailss {
-    border: 1px solid rgb(116, 116, 116);
+    border: 1px solid rgb(56, 56, 56);
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    width: 300px;
-    /* margin:0 15px 15px; */
+    width: 280px;
     margin: 0 10px 20px 10px;
-    height: 280px;
     padding: 10px;
-
+    background-color: rgb(24, 24, 24);
 
 }
 
 .top-employee-user-detaill {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 100%;
-    line-height: 2;
+    text-align: center;
     margin: 10px;
 }
 
+.top-employee-user-detaill h3 {
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 600;
 
+}
+
+.top-employee-user-detaill p:nth-child(3),
+.top-employee-user-detaill p:nth-child(4),
+.top-employee-user-detaill p:nth-child(5) {
+    color: rgb(202, 202, 202);
+    margin: 14px 0;
+    font-weight: 400;
+    font-size: 17px;
+
+}
+
+.top-employee-user-detaill p:nth-child(4),
+.top-employee-user-detaill p:nth-child(5) {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.top-employee-user-detaill p:nth-child(4) i,
+.top-employee-user-detaill p:nth-child(5) i {
+    font-size: 18px;
+    margin-inline-end: 3px;
+}
+
+.top-employee-user-detaill a button {
+    padding: 7px 80px;
+    border-radius: 20px;
+    background-color: #6031a8;
+    border: 2px solid #6031a8;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: none;
+    font-size: 13px;
+    margin-top: 15px;
+    outline: none;
+}
 
 .top-employee-imgg img {
     width: 100px;

@@ -2,16 +2,19 @@ import React from "react";
 import "../styles/EmployeeList.css";
 import { FiSearch } from "react-icons/fi";
 import { BiFilterAlt } from "react-icons/bi";
+import { AiOutlineStar } from "react-icons/ai";
+import { MdOutlineLocationOn } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const EmployeeList = () => {
   const userDetails = [
     {
       id: "1",
-      name: "MD Furkan",
+      name: "Md Furkan",
       location: "New Delhi",
-      Price: "12000/month",
-      images:
-        "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=",
+      Price: "₹135/hr",
+      images:        "https://www.upwork.com/profile-portraits/c1mMhDJ1UQqaERSEJKitC2alYTPWAdbO_9XAA0aplj9OUzEOCJQYrgsG6zDbbkxh_0",
+
     },
     {
       _id: "2",
@@ -19,7 +22,8 @@ const EmployeeList = () => {
       location: "Mumbai",
       Price: "1000/month",
       images:
-        "https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=",
+      "https://www.upwork.com/profile-portraits/c1mkLMP2m92nPYcxC-z87bUYVdbxWvQppqkMtpT7XQWRmLgXMkmHXO4tLJpREUZ9nT",
+
     },
     {
       _id: "3",
@@ -27,7 +31,7 @@ const EmployeeList = () => {
       location: "Bihar",
       Price: "13000/month",
       images:
-        "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+        "https://www.upwork.com/profile-portraits/c1YX81S8-8PQVJzrBUrom4dUlhyFo2MYmcGvw2b9STHKm1DMDyXecUnGfyjE1uzAjj",
     },
     {
       _id: "4",
@@ -113,7 +117,6 @@ const EmployeeList = () => {
           <div>
             <input type="text" placeholder="eg. Photgraphy,Delhi,JohnDoe" />
             <i>
-              {" "}
               <FiSearch />
             </i>
           </div>
@@ -152,18 +155,37 @@ const EmployeeList = () => {
         {userDetails.map((item) => {
           return (
             <div className="top-employee-detailss" key={item.id}>
-              <div className="top-employee-user-detaill">
-                <div>
-                  <h4>{item.name}</h4>
-                  <p>{item.location}</p>
-                  <p>{item.Price}</p>
-                </div>
-                <div>
-                  <a href="">View Details</a>
-                </div>
-              </div>
               <div className="top-employee-imgg">
                 <img alt="Loading..." src={item?.images} />
+              </div>
+              <div className="top-employee-user-detaill">
+                <h3>{item.name}</h3>
+                <p
+                  style={{
+                    marginTop: "2px",
+                    color: " rgb(218, 218, 218);",
+                    fontSize: "17px",
+                  }}
+                >
+                  Photographer
+                </p>
+                <p>{item.Price}</p>
+                <p>
+                  <i>
+                    <AiOutlineStar />
+                  </i>
+                  4.8/5
+                </p>
+                <p>
+                  <i>
+                    <MdOutlineLocationOn />
+                  </i>
+                  {item.location}
+                </p>
+
+                <Link to="/employee/detail">
+                  <button>View Profile</button>
+                </Link>
               </div>
             </div>
           );
