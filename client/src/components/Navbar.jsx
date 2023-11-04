@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Navbar.css";
 import { Link, useLocation } from "react-router-dom";
-import { HiMenuAlt1 } from "react-icons/hi";
+import { HiOutlineUserCircle, HiMenuAlt1 } from "react-icons/hi";
+import { MdOutlineArrowDropDown, MdOutlineArrowDropUp } from "react-icons/md";
 
 const Navbar = () => {
   const location = useLocation();
@@ -27,6 +28,13 @@ const Navbar = () => {
         : setStickyClass("");
     }
   };
+
+  const [isDropdownUser, setDropdownUser] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownUser(!isDropdownUser);
+  };
+
   return (
     <>
       <div className={`main-navbar ${stickyClass}`}>
@@ -81,29 +89,41 @@ const Navbar = () => {
         <div className="main-navbaar-list2">
           <div className="main-navbar-list2-list">
             <ul>
-              <li>
-                <Link
-                  to="/account/login"
-                  className={
-                    pathname === "login"
-                      ? "hide-navbar-list2 active"
-                      : "hide-navbar-list2"
-                  }
+              <li className="dropdown-list" style={{ marginTop: "5px" }}>
+                <div
+                  className={`navbar-link ${
+                    location.pathname === "/Contest/Quize-contest" ||
+                    location.pathname === "/Contest/Coding-contest"
+                      ? "active"
+                      : ""
+                  }`}
+                  onClick={toggleDropdown}
                 >
-                  Login
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/account/register"
-                  className={
-                    pathname === "register"
-                      ? "hide-navbar-list2 active"
-                      : "hide-navbar-list2"
-                  }
-                >
-                  Register
-                </Link>
+                  <i>
+                    <HiOutlineUserCircle />
+                  </i>
+                  <i
+                    className={`drop-down-list-arrow ${
+                      isDropdownUser ? "up" : "down"
+                    }`}
+                  >
+                    {isDropdownUser ? (
+                      <MdOutlineArrowDropUp />
+                    ) : (
+                      <MdOutlineArrowDropDown />
+                    )}{" "}
+                  </i>
+                </div>
+                {isDropdownUser && (
+                  <ul className="navbar-dropdown-menu">
+                    <li>
+                      <Link to="/account/register">Register</Link>
+                    </li>
+                    <li>
+                      <Link to="/account/login">Login</Link>
+                    </li>
+                  </ul>
+                )}
               </li>
             </ul>
           </div>

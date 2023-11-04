@@ -14,6 +14,7 @@ const Register = () => {
     <>
       {userReg ? (
         <div>
+          {/* user register  */}
           <div className="loginform-main-section">
             <form className="login-form">
               {/* option for employee or user  */}
@@ -56,6 +57,14 @@ const Register = () => {
                   name="password"
                 />
               </div>
+              <div>
+                <span>Confirm Password</span>
+                <input
+                  type="password"
+                  placeholder="Re-enter your password"
+                  name="cpassword"
+                />
+              </div>
 
               {/* forgotte password  */}
               <div className="login-from-forgpass">
@@ -88,6 +97,7 @@ const Register = () => {
       ) : (
         <>
           <div>
+            {/* employee register  */}
             <div className="loginform-main-section">
               <form className="login-form">
                 {/* option for employee or user  */}
@@ -117,7 +127,7 @@ const Register = () => {
                 </div>
                 {/* email input  */}
                 <div>
-                  <span>Email</span>
+                  <span>Official Email</span>
                   <input
                     type="email"
                     placeholder="john@example.com"
@@ -128,15 +138,6 @@ const Register = () => {
                 <div>
                   <span>Phone</span>
                   <input type="email" placeholder="92xxxxxx78" name="text" />
-                </div>
-                {/* password input  */}
-                <div>
-                  <span>Password</span>
-                  <input
-                    type="password"
-                    placeholder="Must be atleast 6 characters"
-                    name="password"
-                  />
                 </div>
 
                 {/* forgotte password  */}
@@ -151,7 +152,7 @@ const Register = () => {
                     type="submit"
                     name="button"
                     className="login-from-btn"
-                    value="Register"
+                    value="Send OTP"
                   />
                 </div>
 
