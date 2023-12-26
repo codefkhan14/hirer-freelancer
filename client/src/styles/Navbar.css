@@ -63,6 +63,7 @@
 
 }
 
+
 /* user logo  */
 
 .main-navbar-list2-list ul i {
@@ -83,7 +84,9 @@
 .navbar-dropdown-menu {
   position: absolute;
   top: 60px;
-  left: -40px;
+  /* border: 2px solid red; */
+  width: 270px;
+  left: -200px;
   background-color: #6031a8;
   flex-direction: column;
   list-style: none;
@@ -91,7 +94,7 @@
 
 .navbar-dropdown-menu li {
   border-bottom: 1px solid white;
-  padding: 10px 0;
+  padding: 15px 0 !important;
   width: 100%;
   text-align: start;
 }
@@ -104,11 +107,28 @@
 
 .navbar-dropdown-menu li a {
   font-size: 16px;
-  padding: 30px;
+  padding: 20px !important;
   color: white;
+
   text-decoration: none;
 }
 
+.navbar-dropdown-menu li a span {
+  /* border: 2px solid red; */
+  display: block;
+  padding: 5px 20px;
+  font-size: 16px;
+}
+
+.navbar-dropdown-menu li a span:nth-child(1) {
+  font-weight: bold;
+
+}
+
+.navbar-dropdown-menu li a span:nth-child(2) {
+  font-weight: 400 !important;
+
+}
 
 
 .sticky-nav-come .main-navbar-list1-list ul a,

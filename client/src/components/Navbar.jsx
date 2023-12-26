@@ -1,10 +1,27 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Navbar.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HiOutlineUserCircle, HiMenuAlt1 } from "react-icons/hi";
 import { MdOutlineArrowDropDown, MdOutlineArrowDropUp } from "react-icons/md";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const userDetails = localStorage.getItem("userDetails");
+  const parsedObject = JSON.parse(userDetails);
+
+  const handleLogout = () => {
+    const isConfirmed = window.confirm("Are you sure you want to Logout?");
+
+    if (!isConfirmed) {
+      return;
+    }
+
+    navigate("/");
+    // navigate("/account/login");
+    localStorage.removeItem("userDetails");
+  };
+
   const location = useLocation();
   const [pathname, setPathname] = useState("");
   useEffect(() => {
@@ -12,7 +29,6 @@ const Navbar = () => {
     if (location.pathname === "/account/login") setPathname("login");
     if (location.pathname === "/account/register") setPathname("register");
   }, [pathname]);
-  console.log(location);
 
   const [stickyClass, setStickyClass] = useState("");
 
@@ -116,12 +132,41 @@ const Navbar = () => {
                 </div>
                 {isDropdownUser && (
                   <ul className="navbar-dropdown-menu">
-                    <li>
-                      <Link to="/account/register">Register</Link>
-                    </li>
-                    <li>
-                      <Link to="/account/login">Login</Link>
-                    </li>
+                    {parsedObject?.token ? (
+                      <>
+                        <li>
+                          <Link>
+                            <span>{parsedObject?.user.name}</span>
+
+                            <span>{parsedObject?.user.email}</span>
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to="/"> Home</Link>
+                        </li>
+                        <li>
+                          <Link>My Application</Link>
+                        </li>
+                        <li>
+                          <Link>Help & Suppport</Link>
+                        </li>
+                        <li>
+                          <Link>Manage Account</Link>
+                        </li>
+                        <li>
+                          <Link onClick={handleLogout}>Logout</Link>
+                        </li>
+                      </>
+                    ) : (
+                      <>
+                        <li>
+                          <Link to="/account/register">Register</Link>
+                        </li>
+                        <li>
+                          <Link to="/account/login">Login</Link>
+                        </li>
+                      </>
+                    )}
                   </ul>
                 )}
               </li>

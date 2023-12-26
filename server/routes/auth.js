@@ -21,7 +21,7 @@ router.post("/user/register", async (req, res) => {
     if (password !== cpassword) {
       return res
         .status(422)
-        .json({ error: "password and confirm password not same" });
+        .json({ error: "password and confirm password not be same" });
     }
 
     const userExist = await User.findOne({
@@ -86,7 +86,7 @@ router.post("/user/login", async (req, res) => {
       audience: process.env.JWT_AUD,
     });
     let UserData = {
-      data: {
+      user: {
         name: userLogin.name,
         phone: userLogin.phone,
         email: userLogin.email,
