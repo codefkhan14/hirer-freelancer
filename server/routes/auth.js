@@ -1,35 +1,18 @@
+// IMPORT MODULES
 const express = require("express");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
 
+// import files
 const User = require("../model/userSchema");
 require("../database/connection");
 
-router.get("/test", (req, res) => {
-  res.send("tjis is touter");
-});
-
-//user register
 router.post("/user/register", async (req, res) => {
-  const { name, email, phone, password, cpassword } = req.body;
+  const { name, email, phone, password } = req.body;
 
   try {
-    if (!name || !email || !password || !cpassword) {
-      return res.status(422).json({ error: "please fill all fields" });
-    }
-
-    if (password !== cpassword) {
-      return res
-        .status(422)
-        .json({ error: "password and confirm password not be same" });
-    }
-
     const userExist = await User.findOne({
-      $or: [
-        { email: email },
-        { phone: phone },
-        // Add more conditions here if needed
-      ],
+      $or: [{ email: email }, { phone: phone }],
     });
 
     if (userExist) {
@@ -37,9 +20,8 @@ router.post("/user/register", async (req, res) => {
     }
 
     const user = new User({ name, email, phone, password });
-    console.log(user._id);
+    await user.save();
 
-    // generate token
     let expTime = "30 days";
     let payload = { id: user._id };
     let token = jwt.sign(payload, process.env.SECRET_KEY, {
@@ -49,33 +31,29 @@ router.post("/user/register", async (req, res) => {
 
     let UserData = {
       user: {
+        userId: user?._id,
         name: name,
-        phone: phone,
         email: email,
+        phone: phone,
       },
       token: token,
       expireTime: expTime,
     };
-    await user.save();
     return res.status(201).json(UserData);
   } catch (error) {
     return res.status(400).json(error);
   }
 });
 
-// user login
 router.post("/user/login", async (req, res) => {
   const { email, password } = req.body;
   try {
-    if (!email || !password) {
-      return res.status(422).json({ error: "please fill all fields" });
-    }
     const userLogin = await User.findOne({ email: email });
     if (!userLogin) {
-      return res.status(400).json({ error: "email not found" });
+      return res.status(400).json({ error: "User not found" });
     }
     if (password !== userLogin.password) {
-      return res.status(400).json({ error: "password wrong" });
+      return res.status(400).json({ error: "Invalid Credential" });
     }
     // generate token
     let expTime = "30 days";
@@ -87,6 +65,7 @@ router.post("/user/login", async (req, res) => {
     });
     let UserData = {
       user: {
+        userId: userLogin?._id,
         name: userLogin.name,
         phone: userLogin.phone,
         email: userLogin.email,
@@ -97,7 +76,7 @@ router.post("/user/login", async (req, res) => {
 
     return res.status(201).json(UserData);
   } catch (error) {
-    console.log("login form ", error);
+    return res.status(401).json(error);
   }
 });
 
